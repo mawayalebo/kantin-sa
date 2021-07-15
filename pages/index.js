@@ -1,22 +1,12 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styled from "styled-components";
+import { ShoppingBasket, Menu } from "@material-ui/icons";
 
 export default function Home() {
   return (
     <div>
-      <Head>
-        <title>Kantin next app</title>
-        
-      </Head>
-
-      <main >
-        <h1>Kantin APP</h1>
-      </main>
-
-      <footer >
-        
-      </footer>
+       index here
     </div>
   )
 }
+
