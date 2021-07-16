@@ -36,6 +36,8 @@ const HeaderLeft = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
-const HeaderRight = styled.div``;
+const HeaderRight = styled.div`
+  display: flex;
+`;
 
 export default Header;
