@@ -1,6 +1,6 @@
  const data = [
-    {name:"BBQ Burger", cookTime: 13, price:25 ,category: "burgers", includes:[]},
-    {name:"Audi R8", cookTime: 20,price:45 , category: "bunny chow", includes:[]},
+    {name:"BBQ Burger", cookTime: 13, price:25 ,category: "burgers", includes:["bbq patty", "lettuce", "tomato", "egg"]},
+    {name:"Audi R8", cookTime: 20,price:45 , category: "bunny chow", includes:["atchaar", "polony", "cheese", "russian", "egg", "vienna", "lettuce"]},
     {name:"Pap & Chicken's Chew", cookTime: 13,price:25 , category: "plates", includes:[]},
     {name:"Pap & Mogodu", cookTime: 13, price:25 ,category: "plates", includes:[]},
     {name:"Sejeso", cookTime: 30, price:20 , category: "bunny chow", includes:[]},
