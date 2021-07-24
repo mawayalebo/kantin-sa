@@ -12,7 +12,7 @@ const Header = () => {
           <RoundButton>
             <ShoppingBasket/>
             <span>
-              0
+              10
             </span>
           </RoundButton>
         </HeaderRight>
@@ -61,19 +61,18 @@ const RoundButton = styled.div`
   position: relative;
   overflow: hidden;
   > svg {
-    font-size: 30px;
     z-index: 2;
   }
   > span {
     position: absolute;
-    background-color: #838383;
-    color: black;
+    color: white;
     display: flex;
     justify-content: center;
     padding: 5px;
-    top: 0px;
+    top: -2px;
     right: 0px;
     border-radius: 400px;
+    font-size: 12px;
   }
 `;
 export default Header;
