@@ -15,7 +15,7 @@ const Meal = () => {
             {
                 meals && meals.map(
                     (meal)=>(
-                        <Container>
+                        <Container key={meal.name}>
                             <MealImage>
                             </MealImage>
                             <MealContent>
@@ -29,14 +29,15 @@ const Meal = () => {
                                 {console.log(meal.includes)}
                                     {
                                         meal && 
-                                            meal.includes.map((item, index)=>(
-                                                <IncludeItem key={index}>
+                                            meal.includes.map((item)=>(
+                                                <IncludeItem key={item}>
                                                 <span>{item}</span>
                                                 <RemoveInclude/>
                                                 </IncludeItem>
                                             ))
                                     }
                                 </MealIncludes>
+                                <CartButton>Add to cart</CartButton>
                             </MealContent>
                         </Container>
                     )
@@ -104,6 +105,17 @@ const RemoveInclude = styled(Close)`
     cursor: pointer;
 `;
 
+const CartButton = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    width: 100%;
+    background-color: purple;
+    color: white;
+    border-radius: 40px;
+    height: 50px;
+`;
 
 
 

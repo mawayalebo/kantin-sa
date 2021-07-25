@@ -27,7 +27,7 @@ const HeaderContainer = styled.div`
   justify-content: space-between;
 `;
 const HeaderLeft = styled.div`
-  background-color: rgb(13, 13, 13);
+  background-color: purple;
   padding: 10px;
   padding-right: 30px;
   border-radius: 0px 400px 400px 0px;
@@ -53,7 +53,7 @@ const HeaderRight = styled.div`
 const RoundButton = styled.div`
   display: flex;
   justify-content: center;
-  background-color: rgb(13,13,13);
+  background-color: purple;
   padding: 10px;
   color: white;
   margin: 10px;
