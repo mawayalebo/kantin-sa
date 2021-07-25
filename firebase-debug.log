@@ -1,0 +1,25 @@
+[debug] [2021-07-25T09:51:51.836Z] ----------------------------------------------------------------------
+[debug] [2021-07-25T09:51:51.847Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Zerone\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-07-25T09:51:51.849Z] CLI Version:   9.2.2
+[debug] [2021-07-25T09:51:51.849Z] Platform:      win32
+[debug] [2021-07-25T09:51:51.850Z] Node Version:  v14.15.4
+[debug] [2021-07-25T09:51:51.855Z] Time:          Sun Jul 25 2021 02:51:51 GMT-0700 (Pacific Daylight Time)
+[debug] [2021-07-25T09:51:51.856Z] ----------------------------------------------------------------------
+[debug] [2021-07-25T09:51:51.856Z] 
+[debug] [2021-07-25T09:51:51.890Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-07-25T09:51:51.893Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Zerone\Documents\clients\mulink\kantin-sa
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
