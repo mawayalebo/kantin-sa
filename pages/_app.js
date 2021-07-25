@@ -1,7 +1,7 @@
 import Layout from "../comps/Layout";
 import "../materialize/css/materialize.css";
 import { Provider } from "react-redux";
-import store from "../app/store";
+import {store} from "../app/store";
 
 function MyApp({ Component, pageProps }) {
   return(
