@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { Menu, ShoppingBasket } from "@material-ui/icons";
+import { selectBasket } from "../app/slices/basket.slice";
+import { useSelector } from "react-redux";
+
 const Header = () => {
+  const basketItems = useSelector(selectBasket);
   return (
     <div>
       <HeaderContainer>
@@ -11,9 +15,10 @@ const Header = () => {
         <HeaderRight>
           <RoundButton>
             <ShoppingBasket/>
-            <span>
-              10
-            </span>
+              {
+                basketItems.length &&
+                <span>{basketItems.length}</span>
+              }
           </RoundButton>
         </HeaderRight>
       </HeaderContainer>

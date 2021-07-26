@@ -4,16 +4,28 @@ import Image from "next/image";
 import {data} from "../../mockdata/meals";
 import { useEffect } from "react";
 import { Close } from "@material-ui/icons";
+import { useDispatch } from "react-redux";
+import { addToBasket } from "../../app/slices/basket.slice";
+
 const Meal = () => {
     const router = useRouter();
-    const meals = data.filter((meal)=>{
+    const meal = data.filter((meal)=>{
         return meal.name == router.query.id;
     });
+
+    const dispatch = useDispatch();
+
+    const addItemToBasket = (e)=>{
+        e.preventDefault();
+        dispatch(addToBasket(meal));
+        router.push("/");
+        alert("Meal Added to Basket");
+    }
 
     return (
         <div>
             {
-                meals && meals.map(
+                meal && meal.map(
                     (meal)=>(
                         <Container key={meal.name}>
                             <MealImage>
@@ -37,7 +49,7 @@ const Meal = () => {
                                             ))
                                     }
                                 </MealIncludes>
-                                <CartButton>Add to cart</CartButton>
+                                <CartButton onClick={addItemToBasket} className="waves-effect waves-light">Add to cart</CartButton>
                             </MealContent>
                         </Container>
                     )
@@ -54,7 +66,7 @@ const Container = styled.div`
     width: 100%;
     position: relative;
     padding: 20px;
-    flex-direction: column;w
+    flex-direction: column;
 `;
 
 const MealImage = styled.div`
@@ -115,6 +127,7 @@ const CartButton = styled.div`
     color: white;
     border-radius: 40px;
     height: 50px;
+    cursor: pointer;
 `;
 
 
