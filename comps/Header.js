@@ -2,9 +2,14 @@ import styled from "styled-components";
 import { Menu, ShoppingBasket } from "@material-ui/icons";
 import { selectBasket } from "../app/slices/basket.slice";
 import { useSelector } from "react-redux";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const basketItems = useSelector(selectBasket);
+  const router = useRouter();
+  const goToCart = ()=>{
+    router.push("/cart");
+  }
   return (
     <div>
       <HeaderContainer>
@@ -13,7 +18,7 @@ const Header = () => {
           <h4>Kantin</h4>
         </HeaderLeft>
         <HeaderRight>
-          <RoundButton>
+          <RoundButton onClick={goToCart}>
             <ShoppingBasket/>
               {
                 basketItems.length &&
