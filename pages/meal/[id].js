@@ -28,8 +28,7 @@ const Meal = () => {
                 meal && meal.map(
                     (meal)=>(
                         <Container key={meal.name}>
-                            <MealImage>
-                            </MealImage>
+                            <MealImage width="250" height="250" src={meal.image}/>
                             <MealContent>
                                 <MealName>
                                     {meal.name}
@@ -69,13 +68,12 @@ const Container = styled.div`
     flex-direction: column;
 `;
 
-const MealImage = styled.div`
+const MealImage = styled(Image)`
     display: flex;
     justify-content: center;
     width: 100%;
     height: 350px;
     object-fit: contain;
-    background-color: black;
 
 `;
 

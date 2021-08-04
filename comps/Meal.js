@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const Meal = ({meal}) => {
     const router = useRouter();
@@ -14,7 +15,7 @@ const Meal = ({meal}) => {
             <CardContainer className="hoverable">
                 <CardTop>
                     <div>
-                        <img className="responsive-img"src="https://www.tasteofhome.com/wp-content/uploads/2020/03/Smash-Burgers_EXPS_TOHcom20_246232_B10_06_10b.jpg" alt=""/>
+                        <Image height={200} width={200} className="responsive-img" src={meal.image} alt=""/>
                     </div>
                 </CardTop>
                 <CardMiddle className="">
