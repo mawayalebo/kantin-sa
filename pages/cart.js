@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { selectBasket } from "../app/slices/basket.slice";
 import { useSelector } from "react-redux";
+import Image from "next/image";
+import { Close } from "@material-ui/icons";
 
 const Cart = () => {
     const basketItems = useSelector(selectBasket);
@@ -13,9 +15,13 @@ const Cart = () => {
                         (item)=>{
                             return(
                                 <ItemCard key={item.name}>
-                                    <MealImage>
-
-                                    </MealImage>
+                                    <MealImage src={item.image} width={50} height={50}/>
+                                    <MealContent>
+                                        <span>{item.name}</span>
+                                    </MealContent>
+                                    <MealFunctions>
+                                        <CloseFunction/>
+                                    </MealFunctions>
                                 </ItemCard>
                             )
                         }
@@ -40,19 +46,32 @@ const ItemCard = styled.div`
     padding: 10px;
     position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
 
 `;
-const MealImage = styled.div`
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    background-color: black;  
+const MealImage = styled(Image)`
 `;
 
 const MealTitle = styled.div`
     display: flex;
     font-weight: bold;
+`;
+
+const MealContent = styled.div`
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+
+`;
+
+const MealFunctions = styled.div`
+    display: flex;
+    justify-self: flex-end;
+    justify-content: flex-end;
+
+`;
+
+const CloseFunction = styled(Close)`
+    color: purple;
 `;
 export default Cart;
